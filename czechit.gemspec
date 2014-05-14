@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "czechit"
   spec.version       = Czechit::VERSION
   spec.authors       = ["Michal Vich"]
-  spec.email         = ["vich@zensys.cz"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.email         = ["michal.vich@gmail.com"]
+  spec.summary       = %q{Validation of Czech phone numbers}
+  spec.description   = %q{Validation of Czech phone numbers.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_development_dependency "rspec"
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
 end

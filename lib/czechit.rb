@@ -1,5 +1,11 @@
 require "czechit/version"
+require 'czechit/phone'
 
 module Czechit
-  # Your code goes here...
+
+  def self.validate?(phone_number)
+    phone = Phone.new
+    phone.validate?(phone_number)
+  end
+
 end
