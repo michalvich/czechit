@@ -2,11 +2,11 @@ module Czechit
 
   class Phone
 
-    @@PHONE_FORMAT = '^[+]?[()/0-9. -]{9,}$'
+    PHONE_REGEXP = '^\+?[0-9]{9,12}$'
 
     def self.validate?(phone_number)
-      re = Regexp.new(@@PHONE_FORMAT).freeze
-      (phone_number =~ re) == nil ? false : true
+      re = Regexp.new(PHONE_REGEXP).freeze
+      (phone_number =~ re) == 0
     end
 
   end
