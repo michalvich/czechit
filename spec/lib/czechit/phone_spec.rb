@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Czechit do
+describe Czechit::Phone do
 
   it "return false for invalid number" do
     described_class.validate?("12345678").should == false
