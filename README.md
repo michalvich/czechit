@@ -1,6 +1,6 @@
 # Czechit
 
-TODO: Write a gem description
+The purpose of this gem is provide validations of phones, identification numbers, VAT identification numbers for Czech Republic
 
 ## Installation
 
@@ -17,8 +17,6 @@ Or install it yourself as:
     $ gem install czechit
 
 ## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
