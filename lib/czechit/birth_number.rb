@@ -8,9 +8,9 @@ module Czechit
 
       re = Regexp.new(BIRTH_NUMBER).freeze
 
-      year, month, day, ext, c = birth_number.scan(/^\s*(\d\d)(\d\d)(\d\d)[ \/]*(\d\d\d)(\d?)\s*$/).flatten
-
       if (birth_number =~ re) == 0
+
+        year, month, day, ext, c = birth_number.scan(BIRTH_NUMBER).flatten
 
         year_number = year.to_i
         month_number = month.to_i
@@ -19,11 +19,9 @@ module Czechit
         # we can't check 9 digits numbers before year 1954
         return year_number < 54 if c==nil
 
-        mod = calculate_modulo(year, month, day, ext)
+        modulo = calculate_modulo(year, month, day, ext)
 
-        if mod.to_s != c
-          return false
-        end
+        return false if modulo.to_s != c
 
         year_number += year_number < 54 ? 2000 : 1900
 
