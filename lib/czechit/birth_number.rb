@@ -5,7 +5,7 @@ module Czechit
     BIRTH_NUMBER = '^\s*(\d\d)(\d\d)(\d\d)[ /]*(\d\d\d)(\d?)\s*$'
 
     def self.validate?(birth_number)
-      
+
       re = Regexp.new(BIRTH_NUMBER).freeze
 
       year, month, day, ext, c = birth_number.scan(/^\s*(\d\d)(\d\d)(\d\d)[ \/]*(\d\d\d)(\d?)\s*$/).flatten
